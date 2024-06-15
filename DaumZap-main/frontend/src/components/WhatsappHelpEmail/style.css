@@ -1,0 +1,53 @@
+/* WhatsAppChat.css */
+
+@media (max-width: 600px) {
+    .whatsapp-chat {
+      display: none;
+    }
+  }
+
+.whatsapp-chat {
+    position: fixed;
+    bottom: 40px;
+    right: 5px;
+}
+
+.whatsapp-chat img{
+    width: 80px;
+    margin-right: 10px;
+    display: flex; /* Adicionado para alinhar itens na linha */
+    align-items: flex-end; /* Alinhar itens na parte inferior */
+    cursor: pointer; /* Altera o cursor para indicar que é clicável */
+}
+
+.whatsapp-chat a {
+    text-decoration: none; /* Remove a decoração de texto padrão (sublinhado) */
+    color: inherit; /* Mantém a cor padrão do texto */
+    cursor: pointer; /* Altera o cursor para indicar que é clicável */
+}
+
+.speech-bubble {
+    position: relative;
+    background-color: #25D366; /* Cor de fundo do balão */
+    color: #fff; /* Cor do texto */
+    padding: 10px;
+    border-radius: 10px; /* Ajuste o valor para a forma desejada do balão */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 200px; /* Ajuste conforme necessário para controlar a largura máxima do balão */
+    left: -70%; /* Ajuste para posicionar o balão à esquerda do ícone do WhatsApp */
+}
+
+.message {
+    display: block;
+}
+
+.speech-bubble::before {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 115px;
+    margin-left: -8px; 
+    border-width: 8px 8px 0;
+    border-style: solid;
+    border-color: #25D366 transparent transparent transparent;
+}
